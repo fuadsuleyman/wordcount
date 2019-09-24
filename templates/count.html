@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Count Page</title>
+</head>
+<body>
+<a href="{% url '' %}">Home Page</a><br>
+<h1>There are {{ count }} word in you text</h1>
+<br>
+<a href="{% url 'text' %}">Add New Text</a>
+<br>
+<h2>You Text:</h2>
+{{ fult }}
+<br>
+<h2>Each count off words in text:</h2><br>
+{{ word_dictionary }}
+
+<!-- Asagidaki kodlar (for-la baglu) ishlemirler -->
+
+{% for word, counttotal in sorted_dict %}
+
+{{ word }}
+<br>
+{{ counttotal }}
+<br>
+
+{% endfor %}
+
+</body>
+</html>
